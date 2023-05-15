@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+body{
+    margin-bottom: 50px;
+}
+h1 { 
+    text-align: center;
+    text-shadow: 1px 1px 2px #000000;
+}
+header{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    background-color:  #000000;
+    color: aliceblue;
+}
+header img{animation: floating 3s infinite ease-in-out; }
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(0, -0px); }   
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav li{
+    display: flex;
+    margin: 15px;
+    text-align: center;
+}
+nav a{
+    color: aliceblue;
+}
+nav a:hover{
+    color: #7fffd4;
+}
+img{
+    max-width: 100%;
+}
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color:#b9b9b9a2;
+    padding: 20px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+main h1{
+    padding: 15px;
+}
+main p{
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px #000000;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 780px;
+    margin: 0 auto;
+    margin-top: 75px;
+    grid-gap: 20px;
+}
+.grid  div:nth-child(n+4){
+    padding: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    background-color: #00000075;
+}
+.grid  div.anuncio{
+    grid-column: 1;
+    grid-row: 2/5;
+    display: block;
+    background-color: #00000000;
+}
+@media (max-width: 600px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px;
+    }
+    .grid  div.anuncio{
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+        background-color: none;
+    }
+
+    main{
+        margin: 10px;
+    }
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.flex h1{
+    display: block;
+    text-align: center;
+}
+.flex div{
+    flex: 1 1 200px;
+    margin: 10px;
+}
